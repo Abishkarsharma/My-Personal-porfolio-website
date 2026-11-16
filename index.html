@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Abishkar Sharma</title>
+<meta name="description" content="Abishkar Sharma, junior data analyst and software engineering student at PCPS, Lalitpur. Based in Kathmandu.">
+<meta property="og:title" content="Abishkar Sharma">
+<meta property="og:description" content="Junior data analyst, software engineering student, Kathmandu.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Caveat:wght@500;700&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#f6f4ef;
+  --ink:#1c1b19;
+  --soft:#5f5b54;
+  --rule:#d9d4c9;
+  --red:#c8102e;
+  --blue:#1d3a8a;
+  --marker:#ffe27a;
+  --head:"Bricolage Grotesque", "Segoe UI", system-ui, sans-serif;
+  --text:"Newsreader", Georgia, "Times New Roman", serif;
+  --hand:"Caveat", "Segoe Print", cursive;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--paper);color:var(--ink);font-family:var(--text);font-size:19px;line-height:1.6;overflow-x:hidden}
+a{color:var(--ink);text-decoration-color:var(--red);text-decoration-thickness:2px;text-underline-offset:3px}
+a:hover{color:var(--red)}
+:focus-visible{outline:2px solid var(--red);outline-offset:3px}
+img{max-width:100%;display:block}
+.wrap{max-width:960px;margin:0 auto;padding:0 24px}
+.hand{font-family:var(--hand);font-weight:700;color:var(--red);line-height:1.1}
+mark{background:linear-gradient(transparent 55%, var(--marker) 55%, var(--marker) 92%, transparent 92%);color:inherit;padding:0 2px}
+
+header.top{padding:26px 0}
+header.top .wrap{display:flex;justify-content:space-between;align-items:center;gap:16px;font-family:var(--head);font-size:15px}
+header.top .me{font-weight:800;text-decoration:none;font-size:18px}
+header.top .me span{color:var(--red)}
+header.top nav{display:flex;gap:20px;flex-wrap:wrap}
+header.top nav a{text-decoration:none;color:var(--soft)}
+header.top nav a:hover{color:var(--red)}
+
+.hero{position:relative;padding:44px 0 90px}
+.hero .wrap{position:relative;display:grid;grid-template-columns:1.35fr 1fr;gap:40px;align-items:center}
+.hero .hi{font-size:34px;transform:rotate(-3deg);display:inline-block;margin-bottom:4px}
+.hero h1{font-family:var(--head);font-weight:800;font-size:clamp(54px,10vw,104px);line-height:.9;letter-spacing:-.04em}
+.hero h1 .last{display:inline-block;position:relative;color:var(--red)}
+.hero h1 svg{position:absolute;left:-2%;bottom:-16px;width:104%;height:20px;overflow:visible}
+.hero h1 svg path{fill:none;stroke:var(--ink);stroke-width:4;stroke-linecap:round}
+.hero .lede{font-size:22px;line-height:1.5;margin-top:34px;max-width:30ch}
+.actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px;font-family:var(--head);font-size:16px}
+.btn{display:inline-block;padding:11px 20px;border:2px solid var(--ink);border-radius:255px 15px 225px 15px/15px 225px 15px 255px;text-decoration:none;font-weight:700;background:var(--paper);color:var(--ink);font-family:var(--head);font-size:16px;box-shadow:3px 3px 0 var(--ink);transition:transform .15s,box-shadow .15s;cursor:pointer}
+.btn:hover{transform:translate(-2px,-2px);box-shadow:5px 5px 0 var(--ink);color:var(--ink)}
+.btn.red{background:var(--red);color:#fff}
+.btn.red:hover{color:#fff}
+
+.polaroid{position:relative;justify-self:center;width:min(300px,100%);background:#fff;padding:14px 14px 54px;box-shadow:0 2px 0 var(--rule),0 18px 40px rgba(28,27,25,.18);transform:rotate(3deg)}
+.polaroid img{aspect-ratio:1;object-fit:cover;object-position:center 25%}
+.polaroid figcaption{position:absolute;left:0;right:0;bottom:10px;text-align:center;font-size:28px;font-family:var(--hand);font-weight:700}
+.polaroid .tape{position:absolute;top:-14px;left:50%;width:110px;height:30px;transform:translateX(-50%) rotate(-4deg);background:rgba(255,226,122,.75)}
+.note{position:absolute;right:-26px;bottom:70px;width:150px;background:var(--marker);padding:12px 14px;font-family:var(--hand);font-size:21px;line-height:1.15;transform:rotate(-6deg);box-shadow:0 8px 18px rgba(28,27,25,.15)}
+.arrow{position:absolute;left:-92px;top:40px;width:90px;height:80px;overflow:visible}
+.arrow path{fill:none;stroke:var(--red);stroke-width:2.5;stroke-linecap:round;stroke-linejoin:round}
+.mountains{position:absolute;left:0;right:0;bottom:0;width:100%;height:120px;pointer-events:none}
+.mountains path{fill:none;stroke:var(--rule);stroke-width:2;stroke-linejoin:round}
+
+.sec{padding:80px 0}
+.sec-head{display:flex;align-items:baseline;gap:16px;margin-bottom:30px;flex-wrap:wrap}
+.sec-head .num{font-family:var(--hand);font-size:30px;color:var(--red)}
+.sec-head h2{font-family:var(--head);font-weight:800;font-size:clamp(34px,5vw,48px);letter-spacing:-.025em;line-height:1}
+.sec-head .aside{font-family:var(--hand);font-size:24px;color:var(--soft);transform:rotate(-2deg)}
+
+.about-grid{display:grid;grid-template-columns:1.5fr 1fr;gap:48px}
+.about-grid p + p{margin-top:16px}
+.now{background:#fff;border:2px solid var(--ink);padding:22px 24px 18px;border-radius:4px;box-shadow:6px 6px 0 var(--blue);align-self:start;transform:rotate(-1deg)}
+.now h3{font-family:var(--head);font-weight:800;font-size:15px;text-transform:uppercase;letter-spacing:.08em;margin-bottom:10px;display:flex;align-items:center;gap:8px}
+.now h3::before{content:"";width:9px;height:9px;border-radius:50%;background:#22a35a;box-shadow:0 0 0 4px rgba(34,163,90,.2)}
+.now ul{list-style:none;font-size:17px}
+.now li{padding:7px 0;border-top:1px dashed var(--rule)}
+.now li:first-child{border-top:0}
+
+.skills{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.skill{background:#fff;padding:20px;border-radius:6px;border:1px solid var(--rule)}
+.skill:nth-child(odd){transform:rotate(-.8deg)}
+.skill:nth-child(even){transform:rotate(.8deg)}
+.skill h3{font-family:var(--hand);font-size:28px;color:var(--blue);margin-bottom:8px}
+.skill ul{list-style:none;font-size:17px}
+.skill li{padding:2px 0}
+.skill li::before{content:"✓ ";color:var(--red);font-family:var(--head)}
+
+.band{background:var(--ink);color:#f3efe6;position:relative}
+.band::before,.band::after{content:"";position:absolute;left:0;right:0;height:22px;background:var(--paper)}
+.band::before{top:-1px;clip-path:polygon(0 0,100% 0,100% 30%,90% 80%,78% 35%,66% 90%,52% 40%,40% 85%,27% 30%,14% 75%,0 35%)}
+.band::after{bottom:-1px;clip-path:polygon(0 70%,12% 25%,25% 75%,38% 20%,51% 70%,63% 15%,76% 65%,89% 20%,100% 60%,100% 100%,0 100%)}
+.band .sec-head h2{color:#fff}
+.band .sec-head .num{color:var(--marker)}
+.band .sec-head .aside{color:#b9b2a5}
+.cards{display:grid;grid-template-columns:repeat(2,1fr);gap:22px}
+.card{position:relative;display:flex;flex-direction:column;gap:8px;padding:26px 24px 22px;background:#26241f;border:1px solid #3a372f;border-radius:6px;text-decoration:none;color:#f3efe6;transition:transform .2s,border-color .2s}
+.card:hover{transform:translateY(-5px) rotate(-.5deg);border-color:var(--marker);color:#f3efe6}
+.card .n{font-family:var(--hand);font-size:42px;color:var(--marker);line-height:.8}
+.card h3{font-family:var(--head);font-weight:800;font-size:23px;letter-spacing:-.01em}
+.card p{color:#c9c2b4;font-size:17px;flex:1}
+.card .stack{display:flex;flex-wrap:wrap;gap:6px;margin-top:6px}
+.card .stack span{font-family:var(--head);font-size:13px;padding:2px 9px;border:1px solid #4a463c;border-radius:999px;color:#ddd5c5}
+.card .go{font-family:var(--head);font-size:14px;color:var(--marker);margin-top:6px}
+.card.big{grid-column:span 2;background:var(--red);border-color:var(--red)}
+.card.big p{color:#ffe3e6}
+.card.big .n,.card.big .go{color:#fff}
+.card.big .stack span{border-color:rgba(255,255,255,.45);color:#fff}
+
+.journey{position:relative;padding-left:34px}
+.journey::before{content:"";position:absolute;left:8px;top:6px;bottom:6px;border-left:2px dashed var(--rule)}
+.step{position:relative;display:grid;grid-template-columns:110px 1fr;gap:20px;padding:0 0 30px}
+.step:last-child{padding-bottom:0}
+.step::before{content:"";position:absolute;left:-32px;top:6px;width:16px;height:16px;border-radius:50%;background:var(--paper);border:3px solid var(--ink)}
+.step.on::before{background:var(--red);border-color:var(--red)}
+.step .yr{font-family:var(--hand);font-size:26px;color:var(--red);line-height:1.1}
+.step h3{font-family:var(--head);font-weight:800;font-size:21px;line-height:1.25}
+.step p{color:var(--soft);font-size:17px}
+.step ul{list-style:none;margin-top:8px;font-size:17px}
+.step li{padding-left:20px;position:relative;margin-bottom:4px}
+.step li::before{content:"–";position:absolute;left:0;color:var(--red)}
+
+.contact{text-align:center;padding:90px 0 70px}
+.contact .big{font-family:var(--head);font-weight:800;font-size:clamp(40px,7.5vw,78px);line-height:.95;letter-spacing:-.035em;max-width:14ch;margin:10px auto 0}
+.contact .big .hl{position:relative;white-space:nowrap}
+.contact .big .hl svg{position:absolute;left:-18px;top:-2px;width:calc(100% + 36px);height:calc(100% + 10px);overflow:visible}
+.contact .big .hl svg path{fill:none;stroke:var(--red);stroke-width:3;stroke-linecap:round}
+.contact .sub{color:var(--soft);max-width:46ch;margin:26px auto 0}
+.contact .actions{justify-content:center}
+#copyMsg{font-family:var(--hand);font-size:24px;color:var(--red);min-height:30px;margin-top:14px}
+
+footer{border-top:1px solid var(--rule);padding:22px 0;font-family:var(--head);font-size:14px;color:var(--soft)}
+footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px}
+
+@media (prefers-reduced-motion:no-preference){
+  .hero h1 svg path,.contact .big .hl svg path{stroke-dasharray:700;stroke-dashoffset:700;animation:draw 1.2s .4s ease-out forwards}
+  @keyframes draw{to{stroke-dashoffset:0}}
+}
+@media (max-width:860px){
+  .hero .wrap,.about-grid{grid-template-columns:1fr}
+  .polaroid{width:min(250px,80%);margin-top:20px}
+  .arrow{display:none}
+  .note{right:-14px}
+  .skills{grid-template-columns:1fr 1fr}
+  .cards{grid-template-columns:1fr}
+  .card.big{grid-column:auto}
+  header.top nav{display:none}
+}
+@media (max-width:480px){
+  body{font-size:18px}
+  .skills{grid-template-columns:1fr}
+  .step{grid-template-columns:1fr;gap:2px}
+  .note{width:130px;font-size:19px}
+}
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <a class="me" href="#">abishkar<span>.</span></a>
+    <nav>
+      <a href="#about">about</a>
+      <a href="#skills">skills</a>
+      <a href="#work">projects</a>
+      <a href="#journey">journey</a>
+      <a href="#contact">contact</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap">
+    <div>
+      <span class="hand hi">hey there, I'm</span>
+      <h1>Abishkar<br><span class="last">Sharma<svg viewBox="0 0 300 20" preserveAspectRatio="none" aria-hidden="true"><path d="M3 13 C 60 4, 120 17, 180 9 S 270 6, 297 11"/></svg></span></h1>
+      <p class="lede">I'm a <mark>junior data analyst</mark> and a <mark>software engineering</mark> student at PCPS, Lalitpur. Data by day, code by night.</p>
+      <div class="actions">
+        <a class="btn red" href="#work">See my work</a>
+        <a class="btn" href="https://github.com/Abishkarsharma" target="_blank" rel="noopener">GitHub</a>
+        <a class="btn" href="https://www.linkedin.com/in/abishkar-sharma-35275236b/" target="_blank" rel="noopener">LinkedIn</a>
+      </div>
+    </div>
+    <figure class="polaroid">
+      <span class="tape" aria-hidden="true"></span>
+      <svg class="arrow" viewBox="0 0 90 80" aria-hidden="true"><path d="M4 70 C 20 30, 50 18, 82 22 M70 12 L84 22 L70 32"/></svg>
+      <img src="assets/profile.jpg" alt="Abishkar Sharma" width="272" height="272">
+      <figcaption>that's me!</figcaption>
+      <div class="note">based in Kathmandu, Nepal</div>
+    </figure>
+  </div>
+  <svg class="mountains" viewBox="0 0 1200 120" preserveAspectRatio="none" aria-hidden="true"><path d="M0 118 L120 70 L170 92 L260 40 L320 80 L400 22 L470 74 L540 50 L610 96 L700 30 L760 62 L830 8 L900 70 L960 46 L1040 90 L1110 56 L1200 100"/></svg>
+</section>
+
+<section class="sec" id="about">
+  <div class="wrap">
+    <div class="sec-head"><span class="num">01</span><h2>About me</h2><span class="aside">the short version</span></div>
+    <div class="about-grid">
+      <div>
+        <p>I went to school in Baglung and came to Kathmandu for work and study. I got into programming by building small websites and working through Harvard's free CS50 course, and I've kept building things ever since.</p>
+        <p>At work I collect and clean data, find what's interesting in it, and turn it into reports people can actually use. At college I'm learning the engineering side properly: how to design software that holds up, not just code that runs.</p>
+        <p>I like projects where both of those meet: taking <mark>messy information</mark> and building something simple that makes sense of it.</p>
+      </div>
+      <aside class="now">
+        <h3>Right now</h3>
+        <ul>
+          <li>First year of my Bachelor's in Software Engineering at PCPS</li>
+          <li>Working as a junior data analyst (since July 2024)</li>
+          <li>Getting better at backend JavaScript</li>
+          <li>Working through the rest of CS50</li>
+        </ul>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="skills" style="padding-top:20px">
+  <div class="wrap">
+    <div class="sec-head"><span class="num">02</span><h2>Things I work with</h2></div>
+    <div class="skills">
+      <div class="skill"><h3>Languages</h3><ul><li>Python</li><li>Java</li><li>C++</li><li>JavaScript</li></ul></div>
+      <div class="skill"><h3>Web</h3><ul><li>HTML</li><li>CSS</li><li>Responsive layouts</li><li>Node.js (learning)</li></ul></div>
+      <div class="skill"><h3>Data</h3><ul><li>Cleaning</li><li>Analysis</li><li>Reporting</li><li>Spreadsheets</li></ul></div>
+      <div class="skill"><h3>Tools</h3><ul><li>Git</li><li>GitHub</li><li>VS Code</li></ul></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec band" id="work">
+  <div class="wrap">
+    <div class="sec-head"><span class="num">03</span><h2>Projects</h2><span class="aside">things I've built</span></div>
+    <div class="cards">
+      <a class="card big" href="https://github.com/Abishkarsharma/genz-nepal-frontend" target="_blank" rel="noopener">
+        <span class="n">01</span>
+        <h3>Gen Z Nepal</h3>
+        <p>My biggest project so far. A full web app with its own frontend and backend, both in JavaScript. Getting the two talking to each other properly taught me more than any tutorial did.</p>
+        <div class="stack"><span>JavaScript</span><span>Frontend</span><span>Backend</span></div>
+        <span class="go">view on GitHub →</span>
+      </a>
+      <a class="card" href="https://github.com/Abishkarsharma/SimpleReminderSystem" target="_blank" rel="noopener">
+        <span class="n">02</span>
+        <h3>Simple Reminder System</h3>
+        <p>A small Java program for adding and managing reminders. I wrote it to practise object-oriented design and keeping code organised.</p>
+        <div class="stack"><span>Java</span><span>OOP</span></div>
+        <span class="go">view on GitHub →</span>
+      </a>
+      <a class="card" href="https://github.com/Abishkarsharma/Bonkers-Website-UI" target="_blank" rel="noopener">
+        <span class="n">03</span>
+        <h3>Bonkers Corner website</h3>
+        <p>I rebuilt the Bonkers Corner store's interface from scratch to train my eye for layout, spacing and detail.</p>
+        <div class="stack"><span>HTML</span><span>CSS</span></div>
+        <span class="go">view on GitHub →</span>
+      </a>
+      <a class="card" href="https://github.com/Abishkarsharma/anucs50" target="_blank" rel="noopener">
+        <span class="n">04</span>
+        <h3>CS50</h3>
+        <p>My work for Harvard's Introduction to Computer Science, where I first learned about memory, algorithms and data structures.</p>
+        <div class="stack"><span>C</span><span>Python</span></div>
+        <span class="go">view on GitHub →</span>
+      </a>
+      <a class="card" href="https://github.com/Abishkarsharma/My-Personal-porfolio-website" target="_blank" rel="noopener">
+        <span class="n">05</span>
+        <h3>This website</h3>
+        <p>Plain HTML and CSS, no frameworks. One page, so it loads fast even on a slow connection.</p>
+        <div class="stack"><span>HTML</span><span>CSS</span></div>
+        <span class="go">view on GitHub →</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="journey">
+  <div class="wrap">
+    <div class="sec-head"><span class="num">04</span><h2>Journey</h2><span class="aside">so far</span></div>
+    <div class="journey">
+      <div class="step on"><span class="yr">2026 →</span><div><h3>Bachelor's in Software Engineering</h3><p>Patan College for Professional Studies (PCPS), Lalitpur</p></div></div>
+      <div class="step on"><span class="yr">2024 →</span><div><h3>Junior Data Analyst</h3><p>Kathmandu</p>
+        <ul><li>Collect, clean and organise data for analysis</li><li>Prepare reports that help the team track performance</li><li>Spot patterns and trends that support decisions</li></ul></div></div>
+      <div class="step"><span class="yr">2023</span><div><h3>+2 in Science</h3><p>Children Life English Boarding School (CLEBS), Ramrekha, Baglung</p></div></div>
+      <div class="step"><span class="yr">2020</span><div><h3>SEE</h3><p>Adarsha Vidya Mandir Secondary School (AVM), Baglung</p></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="wrap">
+    <span class="hand" style="font-size:30px">05 · contact</span>
+    <p class="big">Let's build something <span class="hl">together<svg viewBox="0 0 300 100" preserveAspectRatio="none" aria-hidden="true"><path d="M150 6 C 60 4, 6 26, 10 52 C 14 82, 110 96, 190 92 C 270 88, 298 62, 290 38 C 282 14, 210 4, 120 10"/></svg></span></p>
+    <p class="sub">Hiring, working on something interesting, or just want to talk about data or code? I'd love to hear from you.</p>
+    <div class="actions">
+      <a class="btn red" href="https://www.linkedin.com/in/abishkar-sharma-35275236b/" target="_blank" rel="noopener">Message me on LinkedIn</a>
+      <a class="btn" href="https://github.com/Abishkarsharma" target="_blank" rel="noopener">GitHub</a>
+      <button class="btn" id="copyLink" type="button">Copy LinkedIn link</button>
+    </div>
+    <p id="copyMsg" aria-live="polite"></p>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <span>© <span id="year">2026</span> Abishkar Sharma</span>
+    <span>Kathmandu, Nepal</span>
+  </div>
+</footer>
+
+<script>
+document.getElementById('year').textContent = new Date().getFullYear();
+document.getElementById('copyLink').addEventListener('click', async function () {
+  var url = 'https://www.linkedin.com/in/abishkar-sharma-35275236b/';
+  var msg = document.getElementById('copyMsg');
+  try { await navigator.clipboard.writeText(url); msg.textContent = 'copied!'; }
+  catch (e) { msg.textContent = url; }
+});
+</script>
+</body>
+</html>
