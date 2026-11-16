@@ -56,11 +56,10 @@ header.top nav a:hover{color:var(--red)}
 .btn.red{background:var(--red);color:#fff}
 .btn.red:hover{color:#fff}
 
-.polaroid{position:relative;justify-self:center;width:min(300px,100%);background:#fff;padding:14px 14px 54px;box-shadow:0 2px 0 var(--rule),0 18px 40px rgba(28,27,25,.18);transform:rotate(3deg)}
+.polaroid{position:relative;z-index:1;justify-self:center;width:min(320px,100%);background:#fff;padding:14px 14px 54px;box-shadow:0 2px 0 var(--rule),0 18px 40px rgba(28,27,25,.18);transform:rotate(2deg)}
 .polaroid img{aspect-ratio:1;object-fit:cover;object-position:center 25%}
 .polaroid figcaption{position:absolute;left:0;right:0;bottom:10px;text-align:center;font-size:28px;font-family:var(--hand);font-weight:700}
 .polaroid .tape{position:absolute;top:-14px;left:50%;width:110px;height:30px;transform:translateX(-50%) rotate(-4deg);background:rgba(255,226,122,.75)}
-.note{position:absolute;right:-26px;bottom:70px;width:150px;background:var(--marker);padding:12px 14px;font-family:var(--hand);font-size:21px;line-height:1.15;transform:rotate(-6deg);box-shadow:0 8px 18px rgba(28,27,25,.15)}
 .arrow{position:absolute;left:-92px;top:40px;width:90px;height:80px;overflow:visible}
 .arrow path{fill:none;stroke:var(--red);stroke-width:2.5;stroke-linecap:round;stroke-linejoin:round}
 .mountains{position:absolute;left:0;right:0;bottom:0;width:100%;height:120px;pointer-events:none}
@@ -142,10 +141,9 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px}
 }
 @media (max-width:860px){
   .hero .wrap,.about-grid{grid-template-columns:1fr}
-  .polaroid{width:min(250px,80%);margin-top:20px}
+  .polaroid{width:min(240px,72%);margin:8px auto 0}
   .arrow{display:none}
-  .note{right:-14px}
-  .skills{grid-template-columns:1fr 1fr}
+    .skills{grid-template-columns:1fr 1fr}
   .cards{grid-template-columns:1fr}
   .card.big{grid-column:auto}
   header.top nav{display:none}
@@ -154,8 +152,7 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px}
   body{font-size:18px}
   .skills{grid-template-columns:1fr}
   .step{grid-template-columns:1fr;gap:2px}
-  .note{width:130px;font-size:19px}
-}
+  }
 </style>
 </head>
 <body>
@@ -190,7 +187,6 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px}
       <svg class="arrow" viewBox="0 0 90 80" aria-hidden="true"><path d="M4 70 C 20 30, 50 18, 82 22 M70 12 L84 22 L70 32"/></svg>
       <img src="assets/profile.jpg" alt="Abishkar Sharma" width="272" height="272">
       <figcaption>that's me!</figcaption>
-      <div class="note">based in Kathmandu, Nepal</div>
     </figure>
   </div>
   <svg class="mountains" viewBox="0 0 1200 120" preserveAspectRatio="none" aria-hidden="true"><path d="M0 118 L120 70 L170 92 L260 40 L320 80 L400 22 L470 74 L540 50 L610 96 L700 30 L760 62 L830 8 L900 70 L960 46 L1040 90 L1110 56 L1200 100"/></svg>
